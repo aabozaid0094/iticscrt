@@ -1,7 +1,7 @@
 const User = (props) => {
-    const {name, phone, website} = props.user;
+    const {name, phone, website} = props;
     return (
-        <div>
+        <div className="User">
             <div>{name}</div>
             <div>{phone}</div>
             <div>{website}</div>
