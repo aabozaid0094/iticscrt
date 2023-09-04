@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <Navbar bg="dark">
                 <Container>
-                    <Navbar.Brand href="#home">ITI Client Side Course React Task</Navbar.Brand>
+                    <Navbar.Brand href="#home">ITI Client Side Course React Tasks</Navbar.Brand>
                 </Container>
             </Navbar>
         </header>
