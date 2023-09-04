@@ -1,35 +1,29 @@
-import { Component } from 'react';
-import Axios from 'axios';
+import { PureComponent } from 'react';
+import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import PuffLoader from "react-spinners/ClipLoader";
 
-class Movie extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { movie: null };
-    }
-    componentDidMount() {
-        Axios.get('https://jsonplaceholder.typicode.com/photos/1')
-            .then(response => this.setState({ movie: response.data }));
-    }
+class Movie extends PureComponent {
     render() {
+        const imgPath = "https://image.tmdb.org/t/p/w500/";
         return (
-            (!this.state.movie)
-                ? <PuffLoader color="#dee2e6" />
-                : (
-                    <div className="Movie d-flex flex-column align-items-center text-center">
-                        <Card className="my-3">
-                            <Card.Body>
-                                <Card.Title>{this.state.movie.title}</Card.Title>
-                                <Card.Text>
-                                    <img src={this.state.movie.thumbnailUrl} alt={"Movie" + this.state.movie.id}></img>
-                                </Card.Text>
-                                <Button variant="secondary" className="me-2 my-2" target="_blank" href={this.state.movie.url}>Full Image</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                )
+            <Col xxl="3" lg="4" sm="6" xs="12" className="my-3">
+                <Card className="Movie my-3">
+                    <Card.Img variant="top" src={imgPath + this.props.poster_path} alt={this.props.title} />
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Text>
+                            <span className="d-flex">{this.props.overview}</span>
+
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup variant="flush">
+                        <ListGroup.Item>{this.props.release_date}</ListGroup.Item>
+                        <ListGroup.Item>{`${this.props.vote_average} (${this.props.vote_count})`}</ListGroup.Item>
+                    </ListGroup>
+                </Card>
+            </Col>
         );
     }
 }
