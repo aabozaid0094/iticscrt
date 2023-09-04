@@ -12,10 +12,13 @@ class App extends Component {
         return (
             <div className="App">
                 <Header></Header>
+                <h2 className="container">Day 17</h2>
                 <Users></Users>
-                <hr></hr>
+                <hr className="container"></hr>
+                <h2 className="container">Day 18</h2>
                 <Slider></Slider>
                 <Movies></Movies>
+                <hr className="container"></hr>
                 <Footer></Footer>
             </div>
         );
