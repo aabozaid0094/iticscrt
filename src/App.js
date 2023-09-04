@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Users from './components/Users';
 import Slider from './components/Slider';
-import Movie from './components/Movie';
+import Movies from './components/Movies';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
                 <Users></Users>
                 <hr></hr>
                 <Slider></Slider>
-                <Movie></Movie>
+                <Movies></Movies>
                 <Footer></Footer>
             </div>
         );
