@@ -16,10 +16,7 @@ class Movies extends Component {
         const path = "/discover/movie?sort_by=popularity.desc";
         const apiUrl = (url, path, apiKey) => url + path + apiKey;
         Axios.get(apiUrl(url, path, apiKey))
-            .then(response => {
-                this.setState({ movies: response.data.results });
-                // console.log(response.data);
-            });
+            .then(response => this.setState({ movies: response.data.results }));
     }
     render() {
         return (

@@ -10,12 +10,10 @@ const Slider = () => {
     const previous_slide = () => {
         if (currentSlide > 0) setCurrentSlide(oldCurrentSlide=>--oldCurrentSlide);
         else setCurrentSlide(slides.length-1);
-        console.log(currentSlide);
     };
     const next_slide = () => {
         if (currentSlide < slides.length-1) setCurrentSlide(oldCurrentSlide=>++oldCurrentSlide);
         else setCurrentSlide(0);
-        console.log(currentSlide);
     };
 
     return (
