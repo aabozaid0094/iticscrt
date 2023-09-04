@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const User = (props) => {
     const { name, phone, website, company, address} = props;
