@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Users from './components/Users';
 import Slider from './components/Slider';
 import Movies from './components/Movies';
+import People from './components/People';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -18,6 +19,8 @@ class App extends Component {
                 <h2 className="container">Day 18</h2>
                 <Slider></Slider>
                 <Movies></Movies>
+                <hr className="container"></hr>
+                <People></People>
                 <hr className="container"></hr>
                 <Footer></Footer>
             </div>
