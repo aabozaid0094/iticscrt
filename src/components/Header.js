@@ -1,12 +1,21 @@
 import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
     return (
-        <header>
-            <Navbar bg="dark">
+        <header className="sticky-top">
+            <Navbar bg="dark" expand="sm">
                 <Container>
                     <Navbar.Brand href="#home">ITI Client Side Course React Tasks</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="header_nav" />
+                    <Navbar.Collapse id="header_nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link href="#day17">Day 17</Nav.Link>
+                            <Nav.Link href="#day18">Day 18</Nav.Link>
+                            <Nav.Link href="#day19">Day 19</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </header>
