@@ -14,16 +14,22 @@ class App extends Component {
             <div className="App">
                 <Header></Header>
                 <div data-bs-spy="scroll" data-bs-target="#header_nav" tabIndex="0">
-                    <h2 id="day17" className="container">Day 17</h2>
-                    <Users></Users>
-                    <hr id="day18" className="container"></hr>
-                    <h2 className="container">Day 18</h2>
-                    <Slider></Slider>
-                    <Movies></Movies>
-                    <hr id="day19" className="container"></hr>
-                    <h2 className="container">Day 19</h2>
-                    <People></People>
-                    <hr className="container"></hr>
+                    <section id="day17">
+                        <h2 className="container">Day 17</h2>
+                        <Users></Users>
+                        <hr className="container"></hr>
+                    </section>
+                    <section id="day18">
+                        <h2 className="container">Day 18</h2>
+                        <Slider></Slider>
+                        <Movies></Movies>
+                        <hr className="container"></hr>
+                    </section>
+                    <section id="day19">
+                        <h2 className="container">Day 19</h2>
+                        <People></People>
+                        <hr className="container"></hr>
+                    </section>
                 </div>
                 <Footer></Footer>
             </div>
