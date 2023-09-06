@@ -7,7 +7,7 @@ class Movie extends PureComponent {
     render() {
         const imgPath = "https://image.tmdb.org/t/p/w500/";
         return (
-            <Col xxl="3" lg="4" sm="6" xs="12" className="my-3">
+            <Col xxl="3" lg="4" sm="6" xs="12">
                 <Card className="Movie my-3">
                     <Card.Img variant="top" src={imgPath + this.props.poster_path} alt={this.props.title} />
                     <Card.Body>
