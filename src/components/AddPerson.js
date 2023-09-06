@@ -17,10 +17,10 @@ const AddPerson = ({ AddPerson }) => {
         <Form onSubmit={submitHandle} className="d-flex flex-column flex-sm-row flex-wrap align-items-center justify-content-center gap-3 mb-3">
             <input type="hidden" name="id" value={person.id}></input>
             <Form.Group controlId="person">
-                <Form.Control type="text" name="name" placeholder="Enter Name" value={person.name} onChange={changePerson} />
+                <Form.Control type="text" name="name" placeholder="Enter Name" value={person.name} onChange={changePerson} required />
             </Form.Group>
             <Form.Group controlId="person">
-                <Form.Control type="number" name="age" placeholder="Enter Age" value={person.age} />
+                <Form.Control type="number" name="age" placeholder="Enter Age" value={person.age} onChange={changePerson} required />
             </Form.Group>
             <div>
                 <Button variant="primary" type="submit">
