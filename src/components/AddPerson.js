@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import Form from 'react-bootstrap/Form';
 import { v4 as uuidv4 } from 'uuid';
 import Button from 'react-bootstrap/Button';
@@ -35,4 +35,4 @@ const AddPerson = ({ addPerson }) => {
     );
 };
 
-export default AddPerson;
+export default memo(AddPerson);

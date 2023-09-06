@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
@@ -15,4 +16,4 @@ const Person = (props) => {
     );
 };
 
-export default Person;
+export default memo(Person);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import AddPerson from './AddPerson';
 import Person from './Person';
 import Container from 'react-bootstrap/Container';
@@ -13,7 +13,7 @@ const People = () => {
         {id:uuidv4(), name:"Reem", age:23}
     ]);
 
-    const addPerson = person => setPeople(oldPeople=>[...oldPeople, {...person, age:+person.age}]);
+    const addPerson = useCallback(person => setPeople(oldPeople=>[...oldPeople, {...person, age:+person.age}]), []);
 
     return (
         <Container className="People">

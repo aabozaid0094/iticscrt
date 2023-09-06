@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Card from 'react-bootstrap/Card';
 
 const Slide = (props) => {
@@ -11,4 +12,4 @@ const Slide = (props) => {
     );
 };
 
-export default Slide;
+export default memo(Slide);
