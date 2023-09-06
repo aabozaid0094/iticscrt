@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import User from './User';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import User from './User';
+import PuffLoader from "react-spinners/ClipLoader";
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -19,7 +20,11 @@ const Users = () => {
     return (
         <Container className="Users">
             <Row className="justify-content-center">
-                {users.map((u)=><User key={u.id} {...u}></User>)}
+                {
+                    (!users.length>0)
+                        ? <PuffLoader className="my-3" color="#dee2e6" />
+                        : users.map((u)=><User key={u.id} {...u}></User>)
+                }
             </Row>
         </Container>
     );
