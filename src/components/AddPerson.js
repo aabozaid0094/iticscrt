@@ -14,19 +14,19 @@ const AddPerson = ({ AddPerson }) => {
     };
 
     return (
-        <Form onSubmit={submitHandle} className="row">
+        <Form onSubmit={submitHandle} className="d-flex flex-column flex-sm-row flex-wrap align-items-center justify-content-center gap-3 mb-3">
             <input type="hidden" name="id" value={person.id}></input>
-            <Form.Group className="col-md-6 mb-3" controlId="person">
-                <Form.Label>Name</Form.Label>
+            <Form.Group controlId="person">
                 <Form.Control type="text" name="name" placeholder="Enter Name" value={person.name} onChange={changePerson} />
             </Form.Group>
-            <Form.Group className="col-md-6 mb-3" controlId="person">
-                <Form.Label>Age</Form.Label>
+            <Form.Group controlId="person">
                 <Form.Control type="number" name="age" placeholder="Enter Age" value={person.age} />
             </Form.Group>
-            <Button variant="primary" type="submit" className="col-md-12">
-                Submit
-            </Button>
+            <div>
+                <Button variant="primary" type="submit">
+                    Add Person
+                </Button>
+            </div>
         </Form>
     );
 };
