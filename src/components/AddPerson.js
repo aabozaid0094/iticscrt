@@ -3,10 +3,14 @@ import Form from 'react-bootstrap/Form';
 import { v4 as uuidv4 } from 'uuid';
 import Button from 'react-bootstrap/Button';
 
-const AddPerson = ({ AddPerson }) => {
-    const [person, setPerson] = useState({ id: uuidv4() });
+const AddPerson = ({ addPerson }) => {
+    const [person, setPerson] = useState({ id: uuidv4(), name: "", age: "" });
     
-    const submitHandle = (event) => AddPerson(event, person);
+    const submitHandle = (event) => {
+        event.preventDefault();
+        addPerson(person);
+        setPerson({ id: uuidv4(), name: "", age: "" });
+    };
     
     const changePerson = (event) => {
         const {name, value} = event.target;

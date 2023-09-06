@@ -13,12 +13,7 @@ const People = () => {
         {id:uuidv4(), name:"Reem", age:23}
     ]);
 
-    const addPerson = (event, person) => {
-        console.log(event);
-        alert("logged");
-        event.preventDefault();
-        setPeople(oldPeople=>[...oldPeople, person])
-    };
+    const addPerson = person => setPeople(oldPeople=>[...oldPeople, {...person, age:+person.age}]);
 
     return (
         <Container className="People">
