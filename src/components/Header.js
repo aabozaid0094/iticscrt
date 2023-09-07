@@ -7,7 +7,7 @@ const Header = () => {
         <header className="sticky-top">
             <Navbar bg="dark" expand="sm">
                 <Container>
-                    <Navbar.Brand href="#home">ITI Client Side Course React Tasks</Navbar.Brand>
+                    <Navbar.Brand href="#home">React Tasks</Navbar.Brand>
                     <Navbar.Toggle aria-controls="header_nav" />
                     <Navbar.Collapse id="header_nav">
                         <Nav className="ms-auto">
